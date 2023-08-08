@@ -30,7 +30,7 @@ class _HowPlayPageState extends State<HowPlayPage> {
         ),
       ),
       body: VideoComponent(
-        asset: "assets/video/howplayvideo.mp4",
+        asset: "assets/video/howplayibet.mp4",
         play: true,
         width: MediaQuery.of(context).size.width,
         height: 100,
