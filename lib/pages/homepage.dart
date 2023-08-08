@@ -3,6 +3,7 @@ import 'package:ibet786/component/videocomponent.dart';
 import 'package:ibet786/pages/howplay.dart';
 import 'package:ibet786/pages/maungview.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'dart:io';
 
 
 
@@ -67,15 +68,19 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.black,
         leading: ClipRRect(
           borderRadius: BorderRadius.circular(10),
-          child: const  Image(
-            image: AssetImage("assets/logos/ibet.png"),
+          child: Image(
+            image: Platform.isAndroid ? AssetImage("assets/logos/ibetandroid.png") : AssetImage("assets/logos/ibetios.png"),
           fit: BoxFit.cover,
           ),
         ),
-        title:const Text("Ibet789 - Myanmar",style: TextStyle(
+        title: Platform.isAndroid ? Text("Ibet789 - Myanmar",style: TextStyle(
           color: Colors.white,
           fontSize: 17,
           fontWeight: FontWeight.bold
+        ),) : Text("789 - Maung",style: TextStyle(
+            color: Colors.white,
+            fontSize: 17,
+            fontWeight: FontWeight.bold
         ),),
         centerTitle: false,
       ),
@@ -238,10 +243,10 @@ class _HomePageState extends State<HomePage> {
                   },
                   leading: ClipRRect(
                     borderRadius: BorderRadius.circular(100),
-                    child:const  Image(
+                    child:  Image(
                       width: 40,
                       height: 40,
-                      image: AssetImage("assets/logos/ibet.png"),
+                      image: Platform.isAndroid ? AssetImage("assets/logos/ibetandroid.png") : AssetImage("assets/logos/ibetios.png"),
                     ),
                   ),
                   title:const  Text("ဘော်ဒီမောင်းကစားနည်း",style: TextStyle(
@@ -261,10 +266,10 @@ class _HomePageState extends State<HomePage> {
                   },
                   leading: ClipRRect(
                     borderRadius: BorderRadius.circular(100),
-                    child:const  Image(
+                    child:  Image(
                       width: 40,
                       height: 40,
-                      image: AssetImage("assets/logos/ibet.png"),
+                      image: Platform.isAndroid ? AssetImage("assets/logos/ibetandroid.png") : AssetImage("assets/logos/ibetios.png"),
                     ),
                   ),
                   title:const Text("မောင်းကြည့်နည်း",style: TextStyle(

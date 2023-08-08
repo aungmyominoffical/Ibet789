@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 
 
@@ -38,9 +40,12 @@ class _MaungViewPageState extends State<MaungViewPage> {
                 bottom: 5,
                 right: 10
               ),
-              child: const Text("IBET789 မောင်းတွက်နည်း..",style: TextStyle(
+              child:Platform.isAndroid ? const Text("IBET789 မောင်းတွက်နည်း..",style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 16
+              ),) : const Text("မောင်းတွက်နည်း..",style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16
               ),),
             ),
             Container(
